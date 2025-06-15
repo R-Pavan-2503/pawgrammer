@@ -1,0 +1,48 @@
+{
+  "name": "pawgrammer",
+  "displayName": "Pawgrammer",
+  "description": "Pawgrammer is your AI-powered dog assistant that sniffs out bugs, suggests better code, and explains errors — all in 4 quirky personalities: Friendly, Instructor, Funny, and Badass. Because coding should be fun (and furry)!",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pawgrammer.analyzeCode",
+        "title": "Analyze Code with Pawgrammer 🐶"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:pawgrammer.analyzeCode"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/node-fetch": "^2.6.12",
+    "@types/vscode": "^1.101.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "node-fetch": "^2.7.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
